@@ -60,6 +60,7 @@ account can use.
 
 ```
 eeg/phase0/     Phase 0 recording script, offline tests and the EPOC X fitting guide
+bridge/         PC-side tools that talk to the Quest app over Wi-Fi (quest_control.py)
 docs/           Images used in this README
 ```
 
