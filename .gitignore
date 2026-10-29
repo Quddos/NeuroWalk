@@ -1,0 +1,11 @@
+# Unity project for the Quest app lives in its own repository
+NeuraLWalkAR/
+
+# Secrets and personal EEG data
+cortex_credentials.json
+recordings/
+*.edf
+
+__pycache__/
+*.pyc
+.claude/

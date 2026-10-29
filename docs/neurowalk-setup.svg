@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>NeuroWalk AR setup: walking on an under-desk walking pad while wearing an Emotiv EPOC X EEG headset and a Meta Quest 3S</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef1f5"/>
+      <stop offset="1" stop-color="#dfe4ea"/>
+    </linearGradient>
+    <linearGradient id="blazer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8eaccb"/>
+      <stop offset="1" stop-color="#6f90b3"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f8fa"/>
+      <stop offset="1" stop-color="#d5d9df"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background and floor -->
+  <rect width="1000" height="640" fill="url(#bg)"/>
+  <rect y="560" width="1000" height="80" fill="#cdd3db"/>
+  <line x1="0" y1="560" x2="1000" y2="560" stroke="#b7bec8" stroke-width="2"/>
+
+  <!-- standing desk with laptop running the Python bridge -->
+  <g>
+    <rect x="715" y="360" width="200" height="14" rx="3" fill="#8a6a4f"/>
+    <rect x="735" y="374" width="10" height="186" fill="#5b5f66"/>
+    <rect x="885" y="374" width="10" height="186" fill="#5b5f66"/>
+    <rect x="720" y="552" width="40" height="8" rx="2" fill="#4a4e55"/>
+    <rect x="870" y="552" width="40" height="8" rx="2" fill="#4a4e55"/>
+    <!-- laptop -->
+    <rect x="758" y="282" width="120" height="74" rx="5" fill="#2c3036"/>
+    <rect x="764" y="288" width="108" height="62" rx="2" fill="#10151c"/>
+    <polyline points="768,304 776,298 782,308 790,296 798,310 806,300 814,306 822,297 830,309 838,301 846,305 854,298 868,304" fill="none" stroke="#4fd1c5" stroke-width="1.6"/>
+    <polyline points="768,322 778,318 786,326 796,316 806,324 816,319 826,327 836,317 846,323 856,318 868,322" fill="none" stroke="#f6ad55" stroke-width="1.6"/>
+    <rect x="768" y="334" width="14" height="10" fill="#4fd1c5"/>
+    <rect x="786" y="330" width="14" height="14" fill="#63b3ed"/>
+    <rect x="804" y="337" width="14" height="7" fill="#f6ad55"/>
+    <rect x="822" y="332" width="14" height="12" fill="#b794f4"/>
+    <path d="M750,356 H886 L892,362 H744 Z" fill="#3a3f46"/>
+  </g>
+
+  <!-- Wi-Fi link between bridge and headset -->
+  <path d="M766,282 C760,230 730,195 698,172" fill="none" stroke="#3182ce" stroke-width="2" stroke-dasharray="6 6"/>
+  <g fill="none" stroke="#3182ce" stroke-width="2" stroke-linecap="round">
+    <path d="M742,226 a12,12 0 0 1 16,-10"/>
+    <path d="M736,218 a22,22 0 0 1 28,-18"/>
+  </g>
+
+  <!-- passthrough AR task panel floating in front of the walker -->
+  <g>
+    <rect x="574" y="96" width="122" height="84" rx="10" fill="#e6fffa" fill-opacity="0.55" stroke="#38b2ac" stroke-width="2" stroke-dasharray="5 4"/>
+    <circle cx="612" cy="132" r="15" fill="none" stroke="#38b2ac" stroke-width="3"/>
+    <circle cx="612" cy="132" r="5" fill="#38b2ac"/>
+    <rect x="638" y="120" width="44" height="7" rx="3" fill="#38b2ac"/>
+    <rect x="638" y="134" width="30" height="7" rx="3" fill="#81e6d9"/>
+    <text x="635" y="168" font-size="12" fill="#2c7a7b" text-anchor="middle">adaptive task</text>
+  </g>
+
+  <!-- walking pad (no handrails) -->
+  <g>
+    <rect x="250" y="528" width="460" height="30" rx="12" fill="#3b4048"/>
+    <rect x="262" y="524" width="436" height="10" rx="5" fill="#22262c"/>
+    <g stroke="#2f343b" stroke-width="2">
+      <line x1="300" y1="526" x2="300" y2="532"/><line x1="350" y1="526" x2="350" y2="532"/>
+      <line x1="400" y1="526" x2="400" y2="532"/><line x1="450" y1="526" x2="450" y2="532"/>
+      <line x1="500" y1="526" x2="500" y2="532"/><line x1="550" y1="526" x2="550" y2="532"/>
+      <line x1="600" y1="526" x2="600" y2="532"/><line x1="650" y1="526" x2="650" y2="532"/>
+    </g>
+    <rect x="650" y="538" width="40" height="10" rx="3" fill="#10151c"/>
+    <text x="670" y="546.5" font-size="8" fill="#68d391" text-anchor="middle">3.2 km/h</text>
+  </g>
+
+  <!-- back leg -->
+  <path d="M478,392 L452,460 L414,516" fill="none" stroke="#263d66" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M396,512 Q404,500 424,506 L432,522 L392,524 Q388,518 396,512 Z" fill="#1a1d22"/>
+
+  <!-- back arm (far side) -->
+  <path d="M478,250 L458,318 L446,372" fill="none" stroke="#5f7fa3" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="445" cy="380" r="11" fill="#4a2f22"/>
+
+  <!-- front leg -->
+  <path d="M486,392 L522,456 L548,516" fill="none" stroke="#2f4a7a" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M532,510 Q546,500 566,506 Q584,512 584,522 L536,524 Q528,518 532,510 Z" fill="#1a1d22"/>
+
+  <!-- torso: shirt and blazer -->
+  <path d="M450,234 Q484,222 516,234 L524,302 L520,400 L448,400 L444,302 Z" fill="url(#blazer)"/>
+  <path d="M482,232 L506,232 L494,298 Z" fill="#dce9f6"/>
+  <path d="M482,232 L494,298 L476,258 Z" fill="#7c9cc0"/>
+  <path d="M506,232 L494,298 L512,262 Z" fill="#7c9cc0"/>
+  <rect x="448" y="382" width="72" height="12" fill="#2a3f63"/>
+  <circle cx="498" cy="322" r="3" fill="#2d3748"/>
+  <circle cx="498" cy="350" r="3" fill="#2d3748"/>
+
+  <!-- front arm with smartwatch -->
+  <path d="M488,252 L506,322 L552,330" fill="none" stroke="url(#blazer)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M488,252 L506,322 L552,330" fill="none" stroke="#6f90b3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <rect x="550" y="321" width="12" height="18" rx="3" fill="#2d3036"/>
+  <path d="M562,324 Q578,322 582,330 Q578,338 562,337 Z" fill="#5a3a28"/>
+
+  <!-- neck and head (profile facing right) -->
+  <rect x="472" y="200" width="24" height="34" rx="8" fill="#523425"/>
+  <circle cx="484" cy="168" r="40" fill="#5a3a28"/>
+  <path d="M520,170 Q532,180 522,190" fill="#5a3a28"/>
+  <path d="M508,198 Q520,214 506,214 Q498,212 500,202 Z" fill="#1d1612"/>
+  <ellipse cx="470" cy="176" rx="7" ry="11" fill="#4c3022"/>
+  <!-- short hair -->
+  <path d="M446,160 Q446,124 484,124 Q520,124 524,154 Q510,138 484,140 Q458,142 446,160 Z" fill="#17120f"/>
+
+  <!-- Meta Quest 3S: strap and visor -->
+  <path d="M444,160 Q448,190 470,192 L508,186" fill="none" stroke="#3a3f46" stroke-width="7" stroke-linecap="round"/>
+  <path d="M488,130 Q470,150 466,170" fill="none" stroke="#3a3f46" stroke-width="6" stroke-linecap="round"/>
+  <rect x="496" y="146" width="44" height="40" rx="12" fill="url(#visor)" stroke="#aab1bb" stroke-width="1.5"/>
+  <rect x="532" y="150" width="9" height="32" rx="4" fill="#2d3036"/>
+  <circle cx="536" cy="160" r="2.2" fill="#90cdf4"/>
+  <circle cx="536" cy="172" r="2.2" fill="#90cdf4"/>
+
+  <!-- Emotiv EPOC X: band with sensor arms and saline felt sensors -->
+  <path d="M450,190 Q438,150 458,128 Q478,112 500,120" fill="none" stroke="#2b2f35" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#2b2f35" stroke-width="4" stroke-linecap="round">
+    <line x1="500" y1="120" x2="508" y2="130"/>
+    <line x1="478" y1="116" x2="482" y2="126"/>
+    <line x1="458" y1="128" x2="462" y2="136"/>
+    <line x1="444" y1="150" x2="448" y2="158"/>
+    <line x1="442" y1="172" x2="446" y2="178"/>
+  </g>
+  <g fill="#4fd1c5" stroke="#1d4044" stroke-width="1.2">
+    <circle cx="509" cy="132" r="4.5"/>
+    <circle cx="483" cy="128" r="4.5"/>
+    <circle cx="463" cy="138" r="4.5"/>
+    <circle cx="449" cy="160" r="4.5"/>
+    <circle cx="447" cy="180" r="4.5"/>
+    <circle cx="458" cy="192" r="4.5" fill="#f6ad55"/>
+  </g>
+
+  <!-- callouts -->
+  <g font-size="15" fill="#2d3748">
+    <line x1="440" y1="132" x2="330" y2="92" stroke="#718096" stroke-width="1.2"/>
+    <text x="324" y="80" text-anchor="end" font-weight="600">Emotiv EPOC X</text>
+    <text x="324" y="98" text-anchor="end" font-size="13" fill="#4a5568">14-channel saline EEG</text>
+
+    <line x1="536" y1="188" x2="560" y2="274" stroke="#718096" stroke-width="1.2"/>
+    <text x="566" y="288" font-weight="600">Meta Quest 3S</text>
+    <text x="566" y="306" font-size="13" fill="#4a5568">passthrough mixed reality</text>
+
+    <line x1="300" y1="540" x2="230" y2="600" stroke="#718096" stroke-width="1.2"/>
+    <text x="226" y="612" text-anchor="end" font-weight="600">Under-desk walking pad</text>
+
+    <text x="818" y="404" text-anchor="middle" font-weight="600">Python bridge</text>
+    <text x="818" y="422" text-anchor="middle" font-size="13" fill="#4a5568">EEG → difficulty</text>
+  </g>
+  <text x="980" y="628" font-size="11" fill="#718096" text-anchor="end">Illustration · NeuroWalk AR</text>
+</svg>
