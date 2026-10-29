@@ -1,0 +1,5 @@
+# Real Cortex credentials - never commit
+cortex_credentials.json
+# Recordings (personal EEG data)
+recordings/
+__pycache__/
